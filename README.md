@@ -10,7 +10,12 @@ One does need to go and find MSBUILD and install the MSBUILDtools package.  This
 
 A feature of the MSBUILD package is the installation of a Powershell developers terminal.  If you utilize this terminal, it will use regular Linux shell commands (ls, mv, cp, rm) and you won't have to be configuring paths or environment variables.
 
-There are two batch files for builds.  They are not complex.  One will create a console program (makecon.bat) and the other will create a windows "exe" (makewin.bat).  One of these will be needed in your assembler project folder.  However, be warned, using makewin.bat on a source file not written for windowing will not result in a window application output.
+There are two batch files for builds.  They are not complex.  One will compile and link a NASM program to operate in a Windows environment (makenasm.bat) and the other will compile and link a MASM program (makewin.bat).  One of these will be needed in your assembler project folder.
+
+To use these batch files, three variables in each one must be set:
+filename=name of file to assemble and link.
+entry=entry point of program you are compiling and linking.
+system=for the subsystem, either console or windows.
 
 As always, you may use these, but do so at your own risk.  Assembler can cause major system damage if not used wisely.
 
